@@ -43,14 +43,11 @@
     --color-neutral-xx-dark: #4b4c60;
     --color-neutral-xxx-dark: #35374d;
     --color-neutral-xxxx-dark: #20223a;
-
     /* Shadows */
     --shadow-color: #20223a15;
     --inset-shadow: inset 0 1px 1px var(--shadow-color);
-
     /* border radius */
     --radius: 3px;
-
     /* transitions */
     --transition-alpha: .1s ease-out;
 }
@@ -76,9 +73,7 @@ html {
     background-color: var(--color-neutral-xxxx-light);
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
     box-sizing: inherit;
 }
 
@@ -122,9 +117,7 @@ img {
     Default markup for typographic elements
 */
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-weight: 700;
 }
 
@@ -146,32 +139,22 @@ h3 {
     margin: 0 0 24px;
 }
 
-h4,
-h5,
-h6 {
+h4, h5, h6 {
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
     margin: 0 0 24px;
 }
 
-p,
-ol,
-ul,
-dl,
-table,
-address,
-figure {
+p, ol, ul, dl, table, address, figure {
     margin: 0 0 24px;
 }
 
-ul,
-ol {
+ul, ol {
     padding-left: 24px;
 }
 
-li ul,
-li ol {
+li ul, li ol {
     margin-bottom: 0;
 }
 
@@ -209,18 +192,15 @@ a {
     outline-offset: 2px;
 }
 
-a:visited,
-a:active {
+a:visited, a:active {
     color: var(--color-alpha);
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
     color: var(--color-alpha-light);
 }
 
-label,
-input {
+label, input {
     display: block;
 }
 
@@ -292,7 +272,8 @@ input::placeholder {
 .o-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 79.5em; /* 79.5 * 16px = 1272 */
+    max-width: 79.5em;
+    /* 79.5 * 16px = 1272 */
     width: 100%;
 }
 
@@ -306,19 +287,18 @@ input::placeholder {
     position: relative;
 }
 
-.o-section + .o-section {
+.o-section+.o-section {
     padding-top: 24px;
 }
 
 @media (min-width: 768px) {
-    .o-section--lg + .o-section--lg,
-    .o-section--xl + .o-section--xl {
+    .o-section--lg+.o-section--lg, .o-section--xl+.o-section--xl {
         padding-top: 48px;
     }
 }
 
 @media (min-width: 992px) {
-    .o-section--xl + .o-section--xl {
+    .o-section--xl+.o-section--xl {
         padding-top: 72px;
     }
 }
@@ -348,7 +328,7 @@ input::placeholder {
     margin: 0 -12px;
 }
 
-.o-layout--gutter > .o-layout__item {
+.o-layout--gutter>.o-layout__item {
     padding: 0 12px;
 }
 
@@ -356,7 +336,7 @@ input::placeholder {
     margin: 0 -6px;
 }
 
-.o-layout--gutter-sm > .o-layout__item {
+.o-layout--gutter-sm>.o-layout__item {
     padding: 0 6px;
 }
 
@@ -364,7 +344,7 @@ input::placeholder {
     margin: 0 -24px;
 }
 
-.o-layout--gutter-lg > .o-layout__item {
+.o-layout--gutter-lg>.o-layout__item {
     padding: 0 24px;
 }
 
@@ -372,7 +352,7 @@ input::placeholder {
     margin: 0 -48px;
 }
 
-.o-layout--gutter-xl > .o-layout__item {
+.o-layout--gutter-xl>.o-layout__item {
     padding: 0 48px;
 }
 
@@ -472,18 +452,14 @@ input::placeholder {
     width: auto;
     overflow: visible;
     background: transparent;
-
     /* inherit font & color from ancestor */
     color: inherit;
     font: inherit;
-
     /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
     line-height: normal;
-
     /* Corrects font smoothing for webkit */
     -webkit-font-smoothing: inherit;
     -moz-osx-font-smoothing: inherit;
-
     /* Corrects inability to style clickable `input` types in iOS */
     -webkit-appearance: none;
 }
@@ -555,19 +531,20 @@ input::placeholder {
     background-color: white;
     margin-bottom: 24px;
     border-radius: var(--radius);
-    box-shadow: 0 0 0 1px rgba(0,0,0, 0.05), 0 2px 4px rgba(0,0,0,.075);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, .075);
     overflow: hidden;
 }
 
 /* Add padding to child for more flexibility */
-.c-card__body,
-.c-card__footer {
+
+.c-card__body, .c-card__footer {
     padding: 24px 24px 0;
-    overflow: auto; /* Fix margin collapse */
+    overflow: auto;
+    /* Fix margin collapse */
 }
 
 .c-card__footer {
-    text-align: center;
+    text-align: ;
     border-top: 1px solid var(--color-neutral-xxx-light);
     background-color: var(--color-neutral-xxxx-light);
 }
@@ -583,7 +560,6 @@ input::placeholder {
     .c-card__body {
         padding: 48px 48px 24px;
     }
-
     .c-card__title {
         margin-bottom: 48px;
     }
@@ -631,8 +607,7 @@ input::placeholder {
     border-color: var(--color-neutral-xx-light);
 }
 
-.c-input:focus,
-.c-input:active {
+.c-input:focus, .c-input:active {
     border-color: var(--color-alpha-x-light);
     box-shadow: 0 0 0 3px var(--color-alpha-xx-light);
 }
@@ -701,13 +676,9 @@ input::placeholder {
 
 */
 
-.c-option-list {
+.c-option-list {}
 
-}
-
-.c-option-list__item {
-
-}
+.c-option-list__item {}
 
 /*
     Component: Custom options
@@ -715,22 +686,85 @@ input::placeholder {
     Custom checkboxes & radio buttons
 */
 
+.c-custom-input-option-hidden {
+    opacity: 1;
+}
+
+.c-custom-input-option-label {
+    display: flex;
+}
+
+.c-custom-input-option {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    border: solid 1px var(--color-neutral-xxx-light);
+    margin-right: 8px;
+    box-shadow: var(--inset-shadow);
+}
+
+.c-custom-input-option--checkbox {
+    border-radius: var(--radius);
+    align-items: center;
+    justify-content: center;
+}
+
+.c-custom-input-option--radio {
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-custom-input-option__symbol {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    display: block;
+}
+
+.c-custom-input-option--checkbox .c-custom-input-option__symbol {
+    /* Stuff for the checkbox icon... */
+    width: 10px;
+    height: 10px;
+    fill: var(--color-alpha);
+}
+
+.c-custom-input-option--radio .c-custom-input-option__symbol {
+    /* Stuff for the radio button icon... */
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-alpha);
+    border-radius: 3px;
+}
+
+.c-custom-input-option:hover {
+    border-color: var(--color-alpha-x-light)
+}
+
+.c-custom-input-option-hidden:focus+.c-custom-input-option-label .c-custom-input-option, .c-custom-input-option-hidden:active+.c-custom-input-option-label .c-custom-input-option {
+    border: 1px solid var(--color-alpha-x-light);
+    box-shadow: var(--focus-shadow);
+}
+
 /* Hide the actual input with the class .o-hide-accessible */
 
 /* checked state */
 
-.c-custom-input-option-hidden:checked + .c-custom-input-option-label {
+.c-custom-input-option-hidden:checked+.c-custom-input-option-label {
     /*
         Do magic stuff here, for example:
         background-color: red;
     */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
-.c-custom-input-option-hidden:checked + .c-custom-input-option-label .c-custom-input-option__symbol {
+.c-custom-input-option-hidden:checked+.c-custom-input-option-label .c-custom-input-option__symbol {
     /*
         Do magic stuff here, for example:
         fill: blue;
     */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
 /*------------------------------------*\
@@ -810,7 +844,6 @@ input::placeholder {
 .u-max-width-none {
     max-width: none !important;
 }
-
 
 /*
     Utilities: align
@@ -1074,9 +1107,7 @@ No media query since this is the default in mobile first design
 */
 
 @media print {
-    *,
-    *:before,
-    *:after {
+    *, *:before, *:after {
         background: transparent !important;
         color: #000 !important;
         /* Black prints faster:
@@ -1084,8 +1115,7 @@ No media query since this is the default in mobile first design
         box-shadow: none !important;
         text-shadow: none !important;
     }
-    a,
-    a:visited {
+    a, a:visited {
         text-decoration: underline;
     }
     a[href]:after {
@@ -1098,15 +1128,13 @@ No media query since this is the default in mobile first design
     * Don't show links that are fragment identifiers,
     * or use the `javascript:` pseudo protocol
     */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+    a[href^="#"]:after, a[href^="javascript:"]:after {
         content: "";
     }
     pre {
         white-space: pre-wrap !important;
     }
-    pre,
-    blockquote {
+    pre, blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
@@ -1117,18 +1145,14 @@ No media query since this is the default in mobile first design
     thead {
         display: table-header-group;
     }
-    tr,
-    img {
+    tr, img {
         page-break-inside: avoid;
     }
-    p,
-    h2,
-    h3 {
+    p, h2, h3 {
         orphans: 3;
         widows: 3;
     }
-    h2,
-    h3 {
+    h2, h3 {
         page-break-after: avoid;
     }
 }
